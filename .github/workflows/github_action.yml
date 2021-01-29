@@ -34,11 +34,18 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+        with:
+          persist-credentials: false
 
-      - name: "Hello world when it's Monday"
-          if: env.DAY_OF_WEEK == 'Mon'
-          run: echo "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday!"
-          env:
-            FIRST_NAME: Mona
-            middle_name: The
-            Last_Name: Octocat
+      - name: Install 🔧
+        run: npm install
+
+      - name: Lint 🧐
+        run: npm run lint
+
+      - name: Build 🏗️
+        run: npm run build
+
+      - name: Test 🚨
+        run: npm test
+
