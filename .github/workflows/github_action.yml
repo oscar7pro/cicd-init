@@ -34,8 +34,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-       - name: Run custom script
-              run: |
-                echo Add other actions to build,
-                echo test, and deploy your project.
-                echo test, and deploy an other project.
+
+      - name: Run custom script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+          echo test, and deploy an other project.
